@@ -1,0 +1,115 @@
+@import url('https://fonts.bunny.net/css2?family=IBM+Plex+Sans&display=swap');
+
+
+:root {
+    --border-color: 1px solid rgb(18, 18, 18);
+    --box-padding: 2em;
+}
+
+body {
+    font-family: 'IBM Plex Sans';
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+/* left side */
+
+.left-side {
+    position: relative;
+    border-right: var(--border-color);
+    text-align: center;
+    height: 100vh;
+    color: white;
+    background-image: url("./assets/galaxy.jpg");
+    background-size: cover;
+}
+
+.left-side > div {
+    opacity: 0.6;
+    background-color: black;
+    text-align: center;
+    margin-top: 22%;
+    padding: 2em;
+    font-size: 1.5em;
+}
+
+.left-side > p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 1em;
+    font-size: 10px;
+}
+
+.left-side a:link, .left-side a:visited  {
+    color: white
+}
+
+/* right side */
+
+.right-header {
+    margin-top: 5vh;
+}
+
+.right-header > h2{
+    margin: 1.5em;
+    font-size: 22px;
+}
+
+.signup-box {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-left: var(--box-padding);
+    padding-right: var(--box-padding);
+    padding-bottom: var(--box-padding);
+    border-top: var(--border-color);
+    border-bottom: var(--border-color);
+}
+
+.input-section {
+    margin-left: -1em;
+    display: flex;
+    gap: 1em;
+    flex-flow: row wrap;
+}
+
+.input-section > div {
+    margin: 1em;
+}
+
+label {
+    font-size: small;
+}
+
+input {
+    border-radius: 3px;
+    border-style:solid;
+    border-color: black;
+    width: 24vw;
+    height: 20px
+}
+
+button {
+    margin-left: 2.45em;
+    border-radius: 10px;
+    border:none;
+    width: 20em;
+    height: 5em;
+    background-color:rgb(67, 107, 67);
+    color: white;
+    font-weight:bold;
+}
+
+.right-side > p { 
+    margin-left: 2em;
+}
+
+.right-side a:link, .right-side a:visited, .right-side a  {
+    color: rgb(67, 107, 67);
+    text-decoration: none;
+}
