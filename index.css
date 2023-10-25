@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
@@ -86,6 +86,7 @@ main {
 }
 
 .input-section > div {
+    position: relative;
     margin: 1em;
 }
 
@@ -100,6 +101,17 @@ input {
     border-color: black;
     width: 24vw;
     height: 20px
+}
+
+input:focus {
+    outline: none;
+    border-color: blue;
+}
+
+.error {
+    position: absolute;
+    color: red;
+    font-size: 10px;
 }
 
 button {
