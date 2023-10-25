@@ -1,4 +1,7 @@
-@import url('https://fonts.bunny.net/css2?family=IBM+Plex+Sans&display=swap');
+@font-face {
+    font-family: Roboto;
+    src: url('./assets/Roboto-Regular.ttf');
+}
 
 
 :root {
@@ -7,7 +10,7 @@
 }
 
 body {
-    font-family: 'IBM Plex Sans';
+    font-family: 'Roboto';
     margin: 0;
 }
 
@@ -52,6 +55,10 @@ main {
 
 /* right side */
 
+.right-side {
+    background-color: rgb(240, 240, 240);
+}
+
 .right-header {
     margin-top: 5vh;
 }
@@ -62,13 +69,13 @@ main {
 }
 
 .signup-box {
+    background-color: white;
     margin-top: 2em;
     margin-bottom: 2em;
+    padding-top: 0.5em;
     padding-left: var(--box-padding);
     padding-right: var(--box-padding);
     padding-bottom: var(--box-padding);
-    border-top: var(--border-color);
-    border-bottom: var(--border-color);
 }
 
 .input-section {
@@ -87,6 +94,7 @@ label {
 }
 
 input {
+    border: 0.5px;
     border-radius: 3px;
     border-style:solid;
     border-color: black;
