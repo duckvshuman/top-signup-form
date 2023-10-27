@@ -6,29 +6,33 @@ const password = document.getElementById('password')
 const confirmPassword = document.getElementById('confirm-pass')
 const error = document.querySelectorAll('.error')
 
-function isValid(e, errorIndex, message) {
+
+function errorStyle(msgElem, text, target, color) {
+    msgElem.textContent = text
+    target.setAttribute('style', `border-color: ${color}`)
+}
+
+
+function isValid(target, errorIndex, message) {
     let errorElem = error[errorIndex]
-    if (!e.target.checkValidity()) {
-        errorElem.textContent = '* ' + message
-        e.target.setAttribute('style', 'border-color: red')
+    if (!target.checkValidity()) {
+        errorStyle(errorElem, '* ' + message, target, 'red')
     } else {
-        errorElem.textContent = ''
-        e.target.setAttribute('style', 'border-color: black')
+        errorStyle(errorElem, '', target, 'black')
     }
 }
 
-firstName.addEventListener('keyup', (e) => {isValid(e, 0, 'First name cannot be empty')})
-lastName.addEventListener('keyup', (e) => {isValid(e, 1, 'Last name cannot be empty')})
-email.addEventListener('keyup', (e) => {isValid(e, 2, 'Please enter valid email address')})
-phone.addEventListener('keyup', (e) => {isValid(e, 3, 'Please enter valid phone number')})
-password.addEventListener('keyup', (e) => {isValid(e, 4, 'Password cannot be empty')})
+firstName.addEventListener('keyup', (e) => {isValid(e.target, 0, 'First name cannot be empty')})
+lastName.addEventListener('keyup', (e) => {isValid(e.target, 1, 'Last name cannot be empty')})
+email.addEventListener('keyup', (e) => {isValid(e.target, 2, 'Please enter valid email address')})
+phone.addEventListener('keyup', (e) => {isValid(e.target, 3, 'Please enter valid phone number')})
+password.addEventListener('keyup', (e) => {isValid(e.target, 4, 'Password cannot be empty')})
 
 confirmPassword.addEventListener('keyup', (e) => {
+    let errorElem = error[5]
     if (e.target.value !== password.value) {
-        error[5].textContent = '* Passwords do not match'
-        e.target.setAttribute('style', 'border-color: red')
+        errorStyle(errorElem, '* Passwords do not match', e.target, 'red')
     } else {
-        error[5].textContent = ''
-        e.target.setAttribute('style', 'border-color: black')
+        errorStyle(errorElem, '', e.target, 'black')
     }
 })
