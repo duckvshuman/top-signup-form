@@ -59,12 +59,7 @@ main {
     background-color: rgb(240, 240, 240);
 }
 
-.right-header {
-    margin-top: 5vh;
-}
-
 .right-header > h2{
-    margin: 1.5em;
     font-size: 22px;
 }
 
@@ -115,7 +110,6 @@ input:focus {
 }
 
 button {
-    margin-left: 2.45em;
     border-radius: 10px;
     border:none;
     width: 20em;
@@ -132,4 +126,8 @@ button {
 .right-side a:link, .right-side a:visited, .right-side a  {
     color: rgb(67, 107, 67);
     text-decoration: none;
+}
+
+.general-right-box {
+    padding-left: var(--box-padding);
 }
